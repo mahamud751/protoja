@@ -1,14 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import HeroStar from "../atoms/HeroStar";
 
 const Top = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden text-black">
+    <div className="relative w-full h-screen overflow-hidden">
       {/* Background video */}
       <video
-        src="/assets/heroVideo.mp4"
+        src="/assets/4k.mp4"
         autoPlay
         muted
         loop
@@ -18,51 +17,200 @@ const Top = () => {
       ></video>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-between h-full text-white p-6 md:ms-32">
+      <div className="relative z-10 flex flex-col justify-between h-full text-white p-6 ms-32">
+        {/* Top left logo */}
+        <div className="absolute top-24">
+          <div className="flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_764_15706)">
+                <rect width="44" height="44" rx="22" fill="#F76F00" />
+                <path
+                  d="M31.4358 18.4983C31.4358 19.9059 30.9193 21.2427 30.0484 22.2959C29.1876 23.3288 27.9825 24.068 26.2913 24.3313C25.5521 23.0756 24.3672 22.4072 22.9799 21.8807C23.3242 21.5566 23.6179 21.3237 23.8609 21.0503C24.6204 20.1895 24.8128 19.197 24.3571 18.1438C23.9014 17.1008 23.0609 16.5539 21.9267 16.5033C20.8532 16.4628 19.8304 17.1312 19.4253 18.1337C18.9798 19.2173 19.1621 20.1996 19.9418 21.0705C20.195 21.3541 20.4785 21.6174 20.7823 21.9212C20.438 22.0832 20.1038 22.2351 19.7798 22.3971C18.9089 22.8224 18.2101 23.4503 17.6835 24.2605C17.643 24.3212 17.6126 24.382 17.6025 24.4326V27.5112C17.005 27.1972 16.3164 27.0251 15.5974 27.0251C14.7771 27.0251 14.0176 27.2479 13.3594 27.6428V13.5463C13.3594 12.888 13.7138 12.564 14.3923 12.564H24.904C27.1521 12.564 28.6104 13.2222 29.6636 14.2754C30.7775 15.3792 31.4358 16.9084 31.4358 18.4983Z"
+                  fill="#EDEDED"
+                />
+                <path
+                  d="M15.6709 34.0634C17.3487 34.0634 18.7089 32.7032 18.7089 31.0254C18.7089 29.3475 17.3487 27.9873 15.6709 27.9873C13.993 27.9873 12.6328 29.3475 12.6328 31.0254C12.6328 32.7032 13.993 34.0634 15.6709 34.0634Z"
+                  fill="#161616"
+                />
+                <circle
+                  opacity="0.2"
+                  cx="37.495"
+                  cy="13.7738"
+                  r="24.1043"
+                  fill="#3C3C3C"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_764_15706">
+                  <rect width="44" height="44" rx="22" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <div className="mt-2 ms-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="98"
+                height="30"
+                viewBox="0 0 98 30"
+                fill="none"
+              >
+                <path
+                  d="M0.125 2.08789H6.79345C12.9804 2.08789 16.4236 5.06963 16.4236 9.7371C16.4236 14.033 13.2348 17.7488 7.13869 17.7488H5.53971V23.2954H0.125V2.08789ZM10.9817 9.92742C10.9817 7.9698 9.4463 6.94568 7.36582 6.94568H5.53971V12.9726H7.39307C9.43721 12.9726 10.9817 11.8941 10.9817 9.92742Z"
+                  fill="white"
+                />
+                <path
+                  d="M17.9349 7.39974H22.1503L22.6591 9.72894H22.7136C23.7675 7.85289 25.5391 7.22754 26.9836 7.22754C27.4651 7.22754 27.8376 7.25473 28.2101 7.37255V12.2938C27.7558 12.176 27.2743 12.1216 26.811 12.1216C24.9576 12.1216 23.2224 13.0913 23.2224 15.9915V23.2963H17.9258V7.39974H17.9349Z"
+                  fill="white"
+                />
+                <path
+                  d="M28.3867 15.3302C28.3867 10.3274 32.1752 6.97412 36.9358 6.97412C41.7236 6.97412 45.4303 10.3274 45.4303 15.3302C45.4303 20.3059 41.7236 23.7136 36.9358 23.7136C32.1479 23.7136 28.3867 20.3059 28.3867 15.3302ZM40.0974 15.3302C40.0974 13.001 38.5348 11.696 36.9358 11.696C35.3096 11.696 33.7469 13.001 33.7469 15.3302C33.7469 17.6594 35.3096 19.0008 36.9358 19.0008C38.5348 19.0008 40.0974 17.6685 40.0974 15.3302Z"
+                  fill="white"
+                />
+                <path
+                  d="M51.754 7.77115H56.0604V10.6169H51.754V17.4958C51.754 19.7162 53.1259 20.6225 55.0065 20.6225C55.4335 20.6225 55.8877 20.5682 56.4056 20.4775V23.3505C55.9786 23.4321 55.27 23.5499 54.3251 23.5499C50.6456 23.5499 48.4561 21.3657 48.4561 17.668V10.6169H46.1758V7.77115H48.5106V4.16406H51.7631V7.77115H51.754Z"
+                  fill="white"
+                />
+                <path
+                  d="M57.4219 15.529C57.4219 10.8071 60.8651 7.39941 65.3441 7.39941C69.8503 7.39941 73.239 10.8071 73.239 15.529C73.239 20.2508 69.8503 23.6585 65.3441 23.6585C60.847 23.6585 57.4219 20.2508 57.4219 15.529ZM69.8503 15.529C69.8503 12.3206 67.6608 10.4718 65.3441 10.4718C63.0365 10.4718 60.8106 12.3206 60.8106 15.529C60.8106 18.7373 63.0365 20.5861 65.3441 20.5861C67.6517 20.5952 69.8503 18.7463 69.8503 15.529Z"
+                  fill="white"
+                />
+                <path
+                  d="M75.9229 21.1841V7.77082H79.2843V20.9575C79.2843 24.3652 78.6302 26.9573 76.8314 29.2593H73.0156C74.9507 27.1567 75.9229 24.909 75.9229 21.1841ZM75.6321 2.85865C75.6321 1.75296 76.4861 0.928223 77.5945 0.928223C78.7029 0.928223 79.5569 1.75296 79.5569 2.85865C79.5569 3.93715 78.7029 4.76189 77.5945 4.76189C76.4861 4.76189 75.6321 3.93715 75.6321 2.85865Z"
+                  fill="white"
+                />
+                <path
+                  d="M81.9375 15.5561C81.9375 10.6077 85.3535 7.39941 88.9148 7.39941C91.1952 7.39941 93.1848 8.53229 94.3023 10.4446L94.6748 7.771H97.4639V23.2869H94.6748L94.3023 20.6133C93.1939 22.5166 91.1952 23.6585 88.9148 23.6585C85.3535 23.6585 81.9375 20.4502 81.9375 15.5561ZM94.1842 15.529C94.1842 12.5744 92.2491 10.4718 89.7688 10.4718C87.2341 10.4718 85.299 12.5744 85.299 15.529C85.299 18.5107 87.2341 20.5861 89.7688 20.5861C92.2491 20.5952 94.1842 18.5198 94.1842 15.529Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
         {/* Centered heading */}
-        <div className="flex items-center h-full">
+        <div className="flex items-center h-full ">
           <div>
-            <h6 className="text-[48px] md:text-[70px] lg:text-[100px] xl:text-[110px] text-[#161616] font-outfit font-bold leading-none">
-              Top Global UX
+            <h6 className="text-[110px] font-semibold text-white">
+              UI UX Design
             </h6>
             <br />
-            <span className="text-[48px] md:text-[70px] lg:text-[100px] xl:text-[110px] font-outfit font-bold leading-none text-[#575757]">
-              Design Studio
+            <span className="text-[110px] font-semibold text-white">
+              Studio
             </span>
           </div>
         </div>
 
         {/* Bottom text */}
-        <div className="absolute bottom-32 md:bottom-48 lg:bottom-64 left-0 right-0 flex ">
-          <div className="flex px-4 py-1 rounded-[40.994px] bg-white">
+        <div className="absolute bottom-24 left-0 right-0 flex">
+          <div className="flex bg-white text-black px-4 py-1 rounded-[40.994px]">
             <div className="rounded-[22.873px]">
               <Image
-                width={46}
-                height={46}
-                src="/assets/reviewBased.png"
+                width={48}
+                height={48}
+                src="/assets/img/1.png"
                 alt="logo"
               />
             </div>
-            <div className="ms-3">
-              <div className="flex mt-[-4px]">
-                <p className="text-black text-[16px] md:text-[20px] lg:text-[22.125px] font-inter font-medium leading-[31.2px] mx-1">
-                  5.0
-                </p>
-                <HeroStar />
+
+            <div>
+              <div className="flex mt-2">
+                <p className="text-[16px] mt-[-4px] mx-1">5.0</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="14"
+                  viewBox="0 0 15 14"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_763_15627)">
+                    <path
+                      d="M0.673937 5.51439C0.766374 5.2374 1.01998 5.04066 1.32002 5.01446L5.39564 4.65596L7.00725 1.00171C7.12608 0.733903 7.39671 0.560547 7.6974 0.560547C7.99809 0.560547 8.26872 0.733903 8.38755 1.00234L9.99916 4.65596L14.0754 5.01446C14.3749 5.04129 14.6279 5.2374 14.7209 5.51439C14.8138 5.79138 14.728 6.0952 14.5014 6.28671L11.4207 8.90406L12.3291 12.7806C12.3956 13.0656 12.2814 13.3603 12.0373 13.5312C11.9061 13.6231 11.7525 13.6698 11.5977 13.6698C11.4642 13.6698 11.3318 13.635 11.213 13.5661L7.6974 11.5306L4.18308 13.5661C3.92592 13.716 3.60174 13.7023 3.35816 13.5312C3.11392 13.3598 2.99983 13.065 3.0663 12.7806L3.97472 8.90406L0.894039 6.28724C0.667473 6.0952 0.580961 5.7919 0.673937 5.51439Z"
+                      fill="#F63D33"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_763_15627">
+                      <rect
+                        width="14.1207"
+                        height="13.6794"
+                        fill="white"
+                        transform="matrix(-1 0 0 1 14.7578 0.26709)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="14"
+                  viewBox="0 0 15 14"
+                  fill="none"
+                  className="mx-2"
+                >
+                  <g clip-path="url(#clip0_763_15627)">
+                    <path
+                      d="M0.673937 5.51439C0.766374 5.2374 1.01998 5.04066 1.32002 5.01446L5.39564 4.65596L7.00725 1.00171C7.12608 0.733903 7.39671 0.560547 7.6974 0.560547C7.99809 0.560547 8.26872 0.733903 8.38755 1.00234L9.99916 4.65596L14.0754 5.01446C14.3749 5.04129 14.6279 5.2374 14.7209 5.51439C14.8138 5.79138 14.728 6.0952 14.5014 6.28671L11.4207 8.90406L12.3291 12.7806C12.3956 13.0656 12.2814 13.3603 12.0373 13.5312C11.9061 13.6231 11.7525 13.6698 11.5977 13.6698C11.4642 13.6698 11.3318 13.635 11.213 13.5661L7.6974 11.5306L4.18308 13.5661C3.92592 13.716 3.60174 13.7023 3.35816 13.5312C3.11392 13.3598 2.99983 13.065 3.0663 12.7806L3.97472 8.90406L0.894039 6.28724C0.667473 6.0952 0.580961 5.7919 0.673937 5.51439Z"
+                      fill="#F63D33"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_763_15627">
+                      <rect
+                        width="14.1207"
+                        height="13.6794"
+                        fill="white"
+                        transform="matrix(-1 0 0 1 14.7578 0.26709)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="14"
+                  viewBox="0 0 15 14"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_763_15627)">
+                    <path
+                      d="M0.673937 5.51439C0.766374 5.2374 1.01998 5.04066 1.32002 5.01446L5.39564 4.65596L7.00725 1.00171C7.12608 0.733903 7.39671 0.560547 7.6974 0.560547C7.99809 0.560547 8.26872 0.733903 8.38755 1.00234L9.99916 4.65596L14.0754 5.01446C14.3749 5.04129 14.6279 5.2374 14.7209 5.51439C14.8138 5.79138 14.728 6.0952 14.5014 6.28671L11.4207 8.90406L12.3291 12.7806C12.3956 13.0656 12.2814 13.3603 12.0373 13.5312C11.9061 13.6231 11.7525 13.6698 11.5977 13.6698C11.4642 13.6698 11.3318 13.635 11.213 13.5661L7.6974 11.5306L4.18308 13.5661C3.92592 13.716 3.60174 13.7023 3.35816 13.5312C3.11392 13.3598 2.99983 13.065 3.0663 12.7806L3.97472 8.90406L0.894039 6.28724C0.667473 6.0952 0.580961 5.7919 0.673937 5.51439Z"
+                      fill="#F63D33"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_763_15627">
+                      <rect
+                        width="14.1207"
+                        height="13.6794"
+                        fill="white"
+                        transform="matrix(-1 0 0 1 14.7578 0.26709)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
               </div>
-              <p className="text-[13px] md:text-[14px] lg:text-[15.125px] font-semibold text-[#444446] font-inter leading-[28px] tracking-[-0.5px] ms-1">
+              <p className="text-[12px] font-semibold mt-[-10px]">
                 Based on Clutch reviews
               </p>
             </div>
           </div>
         </div>
-
-        <div className="absolute bottom-8 md:bottom-16 lg:bottom-24 right-4 md:right-16 lg:right-40">
-          <div className="max-w-xs md:max-w-md lg:max-w-lg">
-            <span className="text-[14px] md:text-[18px] lg:text-[21px] font-semibold text-[#202124]">
-              Protoja is a UI UX Design and Brand design studio, crafting
-              user-centered experiences and impactful brand identities to drive
-              business growth.
+        <div className="absolute bottom-24 right-40">
+          <div
+            style={{
+              width: "500px",
+            }}
+          >
+            <span className="text-[21px] font-semibold text-white">
+              Protoja is a Leading UI UX Design and Brand design studio,
+              crafting user-centered experiences and impactful brand identities
+              to drive business success.
             </span>
           </div>
         </div>

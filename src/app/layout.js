@@ -1,14 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import "./globals.css";
 import Script from "next/script";
-import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/scrollbar";
-import "swiper/css/effect-cards";
-
 import { Provider } from "./provider";
 
 const geistSans = Geist({
@@ -50,10 +42,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AppRouterCacheProvider options={{ prepend: true }}>
-          <Provider>{children}</Provider>
-        </AppRouterCacheProvider>
-
+        <Provider>{children}</Provider>
         {/* Fontfaces */}
         <Script src="/assets/js/plugins/jquery.min.js"></Script>
         <Script src="/assets/js/plugins/swup.min.js"></Script>

@@ -1,12 +1,5 @@
-import Navbar from "../components/shared/Navbar";
-import Footer from "../components/shared/Footer";
+"use client";
 
 export function Provider({ children }) {
-  return (
-    <>
-      <Navbar />
-      {children}
-      <Footer />
-    </>
-  );
+  return <>{children}</>;
 }
